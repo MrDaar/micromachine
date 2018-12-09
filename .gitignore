@@ -1,0 +1,33 @@
+# GitHub Golang .gitignore template #
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+*~
+*.sw[a-p]
+.directory
+
+# Other #
+*.orig
+*.swp
+.idea/
+*.env
+!.default.env
+
+# Logs and databases #
+*.log
+*.log.*
