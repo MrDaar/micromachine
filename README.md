@@ -1,2 +1,2 @@
-# micromachine
-A small state machine.
+# Micromachine
+A little state machine.  
