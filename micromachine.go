@@ -11,6 +11,9 @@ const (
 )
 
 var (
+	// ErrSubjectCannotBeNil occurs when subject is nil.
+	ErrSubjectCannotBeNil = errors.New(`subject cannot be nil`)
+
 	// ErrInvalidGroup occurs when a group does not exist.
 	ErrInvalidGroup = errors.New(`invalid group`)
 
@@ -50,6 +53,10 @@ type Stateful interface {
 
 // Transition validates state transitions.
 func (sm *StateMachine) Transition(in Group, to State) error {
+	if sm.Subject == nil {
+		return ErrSubjectCannotBeNil
+	}
+
 	if in != GroupPublic {
 		if err := sm.Transition(GroupPublic, to); err == nil {
 			return nil
