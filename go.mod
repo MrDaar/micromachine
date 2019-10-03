@@ -1,3 +1,3 @@
 module github.com/MrDaar/micromachine
 
-go 1.12
+go 1.13

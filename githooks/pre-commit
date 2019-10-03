@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 set -e
-golangci-lint run
+golangci-lint run --skip-dirs=vendor
 go test ./... -failfast -count=1

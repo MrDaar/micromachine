@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	mm "github.com/MrDaar/micromachine"
-	mock "github.com/MrDaar/micromachine/mock"
+	mock "github.com/MrDaar/micromachine/test/mock"
 )
 
 const (
@@ -31,9 +31,9 @@ const (
 	GroupSystem mm.Group = 4
 )
 
-func TestTransition(t *testing.T) {
-	errTransitionDisabled := errors.New(`transition disabled`)
+var errTransitionDisabled = errors.New(`transition disabled`)
 
+func TestTransition(t *testing.T) {
 	sm := &mm.StateMachine{
 		Paths: mm.Paths{
 			GroupPublic: {
